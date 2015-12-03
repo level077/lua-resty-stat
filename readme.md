@@ -12,6 +12,7 @@ log_by_lua_file /path/to/lua-resty-stat/log/log.lua;
 
 server {
 	server_name stat.foo.bar;
+	listen 80;
 	local = /stat {
 		content_by_lua_file /path/to/lua-resty-stat/log/stat.lua;
 	}
